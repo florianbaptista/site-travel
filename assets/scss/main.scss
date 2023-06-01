@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "nav";
+@import "form";
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    margin: 0;
+    overflow-x: hidden;
+
+    main {
+        // display: flex;
+        // align-items: center;
+        // flex-direction: row;
+        // justify-content: center;
+        min-height: 90vh;
+        width: 100%;
+
+        section {
+            background-color: #fffffe;
+            box-sizing: border-box;
+            padding: 0.5rem;
+            width: 100%;
+
+            h1 {
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .textLogin {
+        color: #fffffe;
+    }
+}

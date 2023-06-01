@@ -1,0 +1,554 @@
+.formStatus {
+    padding: 2rem;
+
+    &.fail {
+        background-color: #f25457;
+        color: white;
+        text-align: center;
+    }
+
+    &.success {
+        background-color: #a3f7bf;
+        color: black;
+        text-align: center;
+    }
+}
+
+// formulaire connexion :
+#loginView {
+    text-align: center;
+    padding-left: 25em;
+    padding-right: 25em;
+
+    input {
+        text-align: center;
+    }
+}
+
+// formulaire inscription :
+#registerView {
+    text-align: center;
+    padding-left: 25em;
+    padding-right: 25em;
+
+    input {
+        text-align: center;
+    }
+}
+
+// formulaire ajout article et modifier article :
+.myForm {
+    text-align: center;
+    padding-left: 25em;
+    padding-right: 25em;
+
+    input {
+        text-align: center;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        input {
+            &:not([type="submit"]) {
+                // border: none;
+                padding: 0.5rem;
+            }
+        }
+
+        p {
+            color: #f25457;
+        }
+    }
+}
+
+.buttonsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    input[type="submit"] {
+        color: #fffffe;
+        background-color: #33658A;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        margin-right: 0.5rem;
+        padding: 0.7rem;
+    }
+
+    #cancel {
+        background-color: transparent;
+        border: 2px solid #f25457;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        cursor: pointer;
+        padding: 0.7rem;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+}
+
+button {
+    background-color: #ff5533;
+    color: #fffffe;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    padding: 0.7rem;
+}
+
+// button pour ouvrir la modal est supprimer l'utilisateur:
+#buttonMod {
+    margin-top: 1em;
+    margin-left: 45%;
+}
+
+.modifButton {
+    background-color: #33658A;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    padding: 0.7rem;
+    list-style: none;
+
+    a {
+        color: #fffffe;
+        text-decoration: none;
+    }
+}
+
+#iptSupp {
+    background-color: #ff5533;
+    color: #fffffe;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    padding: 0.7rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.modal {
+    display: none;
+    /* La fenêtre modale est cachée par défaut */
+    position: fixed;
+    /* Elle est positionnée par rapport à la fenêtre du navigateur */
+    z-index: 1;
+    /* Elle est au-dessus de tous les autres éléments de la page */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Pour permettre le défilement si nécessaire */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Un fond semi-transparent */
+}
+
+.modal-content {
+    background-color: #fefeff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.close-btn {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+// #articleView {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+
+
+// }
+
+// page d'accueil :
+// image :
+#heroPage {
+    background-image: url(../img/david-marcu-78A265wPiO4-unsplash.jpg);
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-position: 0% 100%;
+    color: #fffffe;
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    span {
+        color: #33658A;
+    }
+}
+
+
+// titre :
+h1 {
+    margin: 0;
+    padding: 26px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.25rem;
+    text-align: center;
+    margin: 0;
+    padding: 26px;
+    background-color: #33658A;
+    color: #fffffe;
+}
+
+h4 {
+    margin: 6px;
+}
+
+p {
+    margin: 6px;
+}
+
+// description :
+#text {
+    margin-top: 26.5px;
+    display: flex;
+    // background-color: #33658A;
+    // color: #fffffe;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 26.5px;
+}
+
+// cards :
+.listArticle {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .textCategory {
+        font-weight: bold;
+    }
+}
+
+.card {
+    width: 280px;
+    height: 370px;
+    border: black solid 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+    border-radius: 1%;
+
+    .card-image {
+        height: 150px;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            transition: transform .1s;
+        }
+
+        img:hover {
+            transform: scale(1.5);
+        }
+    }
+}
+
+// profil :
+.infPers {
+    text-align: center;
+
+    button {
+        margin-top: 1em;
+    }
+}
+
+#titleMyArticle {
+    margin-top: 26.5px;
+}
+
+.myTables {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 26.5px;
+    margin-bottom: 26.5px;
+
+
+    table {
+        width: 90%;
+        text-align: center;
+        border-collapse: collapse;
+        margin-bottom: 1em;
+
+        td,
+        th,
+        tr {
+            border: 2px solid black;
+
+            a {
+                text-decoration: none;
+                color: #000;
+
+                &:hover {
+                    color: #0071EB;
+                }
+            }
+        }
+    }
+
+}
+
+// oneArticle :
+// titre + img parallax :
+#coverPage {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-position: 0% 100%;
+    color: #fffffe;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#articleTitle {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    background-color: #33658A;
+    color: #fffffe;
+    text-align: center;
+
+}
+
+.contentPost {
+    padding: 20px;
+}
+
+// country :
+.countryPage {
+    background-color: #33658A;
+    width: 100%;
+    height: auto;
+    margin-top: 26.5px;
+    margin-bottom: 26.5px;
+}
+
+// contenu, date, créer, categorie :
+.contentPage {
+    // margin-top: 26.5px;
+    background-color: #33658A;
+    color: #fffffe;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 26.5px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-around;
+    align-items: center;
+}
+
+.otherPage {
+    display: flex;
+    background-color: #33658A;
+    color: #fffffe;
+    margin-bottom: 26.5px;
+}
+
+// list commentaire créer :
+.listCommentPage {
+    background-color: #33658A;
+    color: #fffffe;
+    margin-top: 26.5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+// form commentaire :
+.addCommentPage {
+    text-align: center;
+    padding-left: 15em;
+    padding-right: 15em;
+    margin-top: 26.5px;
+    // width: 100%;
+}
+
+// table myPosts :
+// .tableMyPosts {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+
+//     table {
+//         width: 90%;
+//         text-align: center;
+//         border-collapse: collapse;
+//     }
+// }
+
+.tableMyPosts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 26.5px;
+    margin-bottom: 26.5px;
+
+    table {
+        width: 90%;
+        text-align: center;
+        border-collapse: collapse;
+        margin-bottom: 1em;
+
+        td,
+        th,
+        tr {
+            border-bottom: 2px solid black;
+        }
+    }
+
+    #tableIcons {
+        display: flex;
+        justify-content: space-around;
+        border: none;
+    }
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    height: 2.2em;
+    margin-top: 12px;
+    background: transparent;
+
+    button {
+        background-color: #33658A;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .addCommentPage {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .myForm {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .myTables {
+        overflow-y: scroll;
+    }
+
+    #loginView {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    #registerView {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .searchBar {
+        display: none;
+    }
+}
+
+.footer {
+    background: #33658A;
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: black;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+    padding: 0;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+.articleImage {
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    background-position: 0% 100%;
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

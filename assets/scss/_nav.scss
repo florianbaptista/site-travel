@@ -1,0 +1,30 @@
+nav {
+    background: linear-gradient(180deg,#202020,transparent);
+    display: flex;
+    justify-content: space-between;
+    height: 5em;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    ul {
+        margin-top: 0px;
+        padding: 0px;
+        display: flex;
+        li {
+            display: inline;
+            padding: 1rem;
+            a {
+                text-decoration: none;
+                color: #fffffe;
+                &:hover {
+                    border-bottom: 2px solid #fffffe;
+                }
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
